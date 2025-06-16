@@ -15,7 +15,7 @@
                 <div class="card-body">
                     <h4 class="card-title text-center mb-4">Birth Certificate Application</h4>
 
-                    <form action="deathform" method="post">
+                    <form action="birthform" method="post">
                         <div class="mb-2">
                             <label for="birthId" class="form-label">Birth ID</label>
                             <input type="text" class="form-control form-control-sm" id="birthId" name="birthId" placeholder="Enter Birth ID">

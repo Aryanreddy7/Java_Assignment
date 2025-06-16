@@ -7,7 +7,7 @@ public class DeathDTO implements Serializable {
     private String cause;
     private String date;
     private String time;
-    private int age;
+    private String age;
     private String certifiedBy;
     private String hospitalName;
     private String mannerOfDeath;
@@ -18,7 +18,7 @@ public class DeathDTO implements Serializable {
         System.out.println("Running no-arg const in DeathDTO");
     }
 
-    public DeathDTO(String name, String cause, String date, String time, int age, String certifiedBy, String hospitalName, String mannerOfDeath, String gender, String marks) {
+    public DeathDTO(String name, String cause, String date, String time, String age, String certifiedBy, String hospitalName, String mannerOfDeath, String gender, String marks) {
         this.name = name;
         this.cause = cause;
         this.date = date;
@@ -63,11 +63,11 @@ public class DeathDTO implements Serializable {
         this.time = time;
     }
 
-    public int getAge() {
+    public String getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(String  age) {
         this.age = age;
     }
 

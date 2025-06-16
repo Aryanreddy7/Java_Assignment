@@ -1,6 +1,10 @@
 package com.xworkz.application.servlet;
 
 import com.xworkz.application.dto.BirthDTO;
+import com.xworkz.application.service.BirthService;
+import com.xworkz.application.service.BirthServiceImpl;
+import com.xworkz.application.service.JobService;
+import com.xworkz.application.service.JobServiceImpl;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -25,10 +29,18 @@ public class BirthApplication extends HttpServlet {
         String nurseName = req.getParameter("nurseName");
         String hospitalType = req.getParameter("hospitalType");
 
+        Thread thread=Thread.currentThread();
+        System.out.println(thread);
+
         System.out.println("birthId:" + birthId + ", hospital:" + hospitalName + ", father:" + fatherName + ", mother:" + motherName);
 
         BirthDTO dto = new BirthDTO(birthId, hospitalName, fatherName, motherName, dateTime, doctorName, nurseName, hospitalType);
         req.setAttribute("birthDTO", dto);
+
+        BirthService birthService=new BirthServiceImpl();
+        String res=birthService.validateAndSave(dto);
+        System.out.println("result:"+res);
+
 
         RequestDispatcher dispatcher = req.getRequestDispatcher("/Result");
         dispatcher.forward(req, resp);

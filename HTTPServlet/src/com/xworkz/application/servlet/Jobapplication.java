@@ -1,6 +1,8 @@
 package com.xworkz.application.servlet;
 
 import com.xworkz.application.dto.JobDTO;
+import com.xworkz.application.service.JobService;
+import com.xworkz.application.service.JobServiceImpl;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -27,9 +29,17 @@ public class Jobapplication extends HttpServlet {
         String experience=req.getParameter("experience");
         double sal=Double.parseDouble(salary);
 
+        Thread thread=Thread.currentThread();
+        System.out.println(thread);
+
         System.out.println("name:"+name+","+"email:"+email+","+"education:"+education+"skills:"+skills+","+"salary:"+sal+","+"experience"+experience);
         JobDTO jobDTO=new JobDTO(name,email,education,skills,sal,experience);
         req.setAttribute("jobDTO",jobDTO);
+
+        JobService jobservice=new JobServiceImpl();
+        String res=jobservice.validateAndSave(jobDTO);
+        System.out.println("result:"+res);
+
         RequestDispatcher requestDispatcher=req.getRequestDispatcher("/Result");
         requestDispatcher.forward(req,resp);
     }
