@@ -52,6 +52,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="Constructions.jsp">Construction Form</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="search.jsp">Search</a>
+                </li>
 <!--                <li class="nav-item">-->
 <!--                    <a class="nav-link disabled" href="#">Contact</a>-->
 <!--                </li>-->

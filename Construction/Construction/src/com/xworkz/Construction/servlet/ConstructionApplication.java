@@ -59,7 +59,29 @@ public class ConstructionApplication extends HttpServlet {
         String result = constructionService.validateAndSave(dto);
         System.out.println("Result: " + result);
 
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/Result");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("Constructions.jsp");
+        req.setAttribute("message",result);
+        if(!result.equals("Sucessfully Submited")){
+            req.setAttribute("dto",dto);
+        }
         dispatcher.forward(req, resp);
+    }
+
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String id=req.getParameter("id");
+        int id1=Integer.parseInt(id);
+
+        System.out.println("CoustomerID"+id1);
+
+        ConstructionService constructionService=new ConstructionServiceImpl();
+        ConstructionDTO constructionDTO=constructionService.findById(id1);
+
+        if(constructionDTO==null){
+            System.out.println("dats is not found");
+        }
+        else{
+            System.out.println("data is found");
+        }
     }
 }

@@ -44,26 +44,27 @@
         <div class="form-title">
             <i class="bi bi-building form-icon"></i>Construction Project Inquiry
         </div>
+        ${message}
         <form action="constructionform" method="post">
             <div class="row mb-3">
                 <div class="col-md-6">
                     <label class="form-label">Full Name</label>
-                    <input type="text" name="fullName" class="form-control" required>
+                    <input type="text" name="fullName" class="form-control" required value="${dto.fullName}">
                 </div>
                 <div class="col-md-6">
                     <label class="form-label">Email Address</label>
-                    <input type="email" name="email" class="form-control" required>
+                    <input type="email" name="email" class="form-control" value="${dto.email}" required>
                 </div>
             </div>
 
             <div class="row mb-3">
                 <div class="col-md-6">
                     <label class="form-label">Phone Number</label>
-                    <input type="tel" name="phone" class="form-control" required>
+                    <input type="tel" name="phone" class="form-control" value="${dto.phone}" required>
                 </div>
                 <div class="col-md-6">
                     <label class="form-label">Project Type</label>
-                    <select name="projectType" class="form-select" required>
+                    <select name="projectType" class="form-select"  required>
                         <option value="" disabled selected>Select Type</option>
                         <option value="Residential">Residential</option>
                         <option value="Commercial">Commercial</option>
@@ -74,24 +75,41 @@
 
             <div class="mb-3">
                 <label class="form-label">Location</label>
-                <input type="text" name="location" class="form-control" required>
+                <input type="text" name="location" class="form-control" value="${dto.location}" required>
             </div>
 
             <div class="row mb-3">
                 <div class="col-md-6">
                     <label class="form-label">Preferred Start Date</label>
-                    <input type="date" name="startDate" class="form-control" required>
+                    <input type="date" name="startDate" class="form-control" value="${dto.startDate}" required>
                 </div>
                 <div class="col-md-6">
                     <label class="form-label">Estimated Budget (INR)</label>
-                    <input type="number" name="budget" class="form-control" required>
+                    <input type="number" name="budget" class="form-control"  value="${dto.budget}" required>
                 </div>
             </div>
 
             <div class="form-check mb-4">
-                <input type="checkbox" name="consent" class="form-check-input" id="consentCheck" required>
+                <input type="checkbox" name="consent" class="form-check-input" id="consentCheck" value="${dto.consent}" required>
                 <label class="form-check-label" for="consentCheck">I agree to be contacted for further communication.</label>
             </div>
+
+            <%
+            String message = (String) request.getAttribute("message");
+            if (message != null) {
+            if (message.contains("Please enter valid name")) {
+            %>
+            <p style="color: red;"><%= message %></p>
+            <%
+            } else {
+            %>
+            <p style="color: green;"><%= message %></p>
+            <%
+            }
+            }
+            %>
+
+
 
             <button type="submit" class="btn btn-primary btn-custom">
                 <i class="bi bi-send-fill"></i> Submit Inquiry

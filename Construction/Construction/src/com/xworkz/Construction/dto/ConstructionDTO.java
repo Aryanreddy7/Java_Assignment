@@ -1,6 +1,7 @@
 package com.xworkz.Construction.dto;
 
 public class ConstructionDTO {
+    private int id;
     private String fullName;
     private String email;
     private String phone;
@@ -25,6 +26,10 @@ public class ConstructionDTO {
         this.budget = budget;
         this.consent = consent;
     }
+
+    public ConstructionDTO(String name, String email, String phone, String projectType, String startDate, String budget, String consent) {
+    }
+
 
     // Getters and Setters
     public String getFullName() { return fullName; }
@@ -63,5 +68,12 @@ public class ConstructionDTO {
                 ", budget=" + budget +
                 ", consent=" + consent +
                 '}';
+    }
+    public void setId(int pk) {
+        this.id=id;
+    }
+
+    public int getId() {
+        return id;
     }
 }
