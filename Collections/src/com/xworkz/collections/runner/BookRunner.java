@@ -1,5 +1,6 @@
 package com.xworkz.collections.runner;
 
+import com.xworkz.collections.dto.AboutDTO;
 import com.xworkz.collections.dto.BookDTO;
 
 import java.util.*;
@@ -19,15 +20,19 @@ public class BookRunner {
         books.add(new BookDTO("Think and Grow Rich", "Napoleon Hill", 1937, "Motivational", 238, 1010));
 
 
-        for (BookDTO book : books) {
-            System.out.println("Title: " + book.getTitle());
-            System.out.println("Author: " + book.getAuthor());
-            System.out.println("Year of Publication: " + book.getYear());
-            System.out.println("Genre: " + book.getGenre());
-            System.out.println("Pages: " + book.getPages());
-            System.out.println("Book ID: " + book.getBookId());
-
-            System.out.println("=================");
+//        for (BookDTO book : books) {
+//            System.out.println("Title: " + book.getTitle());
+//            System.out.println("Author: " + book.getAuthor());
+//            System.out.println("Year of Publication: " + book.getYear());
+//            System.out.println("Genre: " + book.getGenre());
+//            System.out.println("Pages: " + book.getPages());
+//            System.out.println("Book ID: " + book.getBookId());
+//
+//            System.out.println("=================");
+//        }
+        Iterator<BookDTO> iterator=books.iterator();
+        while (iterator.hasNext()){
+            System.out.println(iterator.next());
         }
     }
 }

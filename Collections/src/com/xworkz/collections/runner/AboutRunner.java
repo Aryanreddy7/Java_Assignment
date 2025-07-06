@@ -4,6 +4,7 @@ import com.xworkz.collections.dto.AboutDTO;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Iterator;
 
 public class AboutRunner {
     public static void main(String[] args) {
@@ -20,17 +21,21 @@ public class AboutRunner {
         aboutdto.add(new AboutDTO("Divya", 22, 52, "Hassan", "HIT", 91, 21));
 
 
-        for (AboutDTO about:aboutdto){
-            System.out.println("names are :"+about.getName());
-            System.out.println("Ages are :"+about.getAge());
-            System.out.println("weight are :"+about.getWeight());
-            System.out.println("Place names are :"+about.getPlace());
-            System.out.println("Collage names are :"+about.getCollege_name());
-            System.out.println("Cgpa are :"+about.getCgpa());
-            System.out.println("Rollno are :"+about.getRollno());
-
-            System.out.println("=================");
-
+//        for (AboutDTO about:aboutdto){
+//            System.out.println("names are :"+about.getName());
+//            System.out.println("Ages are :"+about.getAge());
+//            System.out.println("weight are :"+about.getWeight());
+//            System.out.println("Place names are :"+about.getPlace());
+//            System.out.println("Collage names are :"+about.getCollege_name());
+//            System.out.println("Cgpa are :"+about.getCgpa());
+//            System.out.println("Rollno are :"+about.getRollno());
+//
+//            System.out.println("=================");
+//
+//        }
+        Iterator<AboutDTO> iterator=aboutdto.iterator();
+        while (iterator.hasNext()){
+            System.out.println(iterator.next());
         }
     }
 }

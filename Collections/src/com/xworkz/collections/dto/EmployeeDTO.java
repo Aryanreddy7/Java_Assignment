@@ -26,4 +26,17 @@ public class EmployeeDTO {
         public String getCompany() { return company; }
         public double getExperience() { return experience; }
         public int getEmpId() { return empId; }
+
+    @Override
+    public String toString() {
+        return "EmployeeDTO{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", weight=" + weight +
+                ", location='" + location + '\'' +
+                ", company='" + company + '\'' +
+                ", experience=" + experience +
+                ", empId=" + empId +
+                '}';
     }
+}

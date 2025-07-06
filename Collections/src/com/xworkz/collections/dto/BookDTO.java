@@ -23,4 +23,16 @@ public class BookDTO {
     public String getGenre() { return genre; }
     public int getPages() { return pages; }
     public int getBookId() { return bookId; }
+
+    @Override
+    public String toString() {
+        return "BookDTO{" +
+                "title='" + title + '\'' +
+                ", author='" + author + '\'' +
+                ", year=" + year +
+                ", genre='" + genre + '\'' +
+                ", pages=" + pages +
+                ", bookId=" + bookId +
+                '}';
+    }
 }

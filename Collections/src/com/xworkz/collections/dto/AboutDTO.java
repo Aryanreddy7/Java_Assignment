@@ -68,6 +68,19 @@ public class AboutDTO {
     }
 
 
+    @Override
+    public String toString() {
+        return "AboutDTO{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", weight=" + weight +
+                ", place='" + place + '\'' +
+                ", college_name='" + college_name + '\'' +
+                ", cgpa=" + cgpa +
+                ", rollno=" + rollno +
+                '}';
+    }
+
     public AboutDTO(String name, int age, int weight, String place, String college_name, double cgpa, int rollno) {
         this.name = name;
         this.age = age;
@@ -76,6 +89,7 @@ public class AboutDTO {
         this.college_name = college_name;
         this.cgpa = cgpa;
         this.rollno = rollno;
+
     }
 
 }
