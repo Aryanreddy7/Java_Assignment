@@ -44,7 +44,7 @@
         <div class="form-title">
             <i class="bi bi-building form-icon"></i>Construction Project Inquiry
         </div>
-        ${message}
+
         <form action="constructionform" method="post">
             <div class="row mb-3">
                 <div class="col-md-6">

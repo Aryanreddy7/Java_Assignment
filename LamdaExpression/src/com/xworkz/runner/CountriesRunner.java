@@ -216,9 +216,8 @@ public class CountriesRunner {
         collection.add("Bouvet Island");
         collection.add("Heard Island and McDonald Islands");
         collection.add("mee");
+        collection.add("mam");
 
-
-//
 //        for(String count:collection){
 //            System.out.println(count);
 //        }
@@ -243,9 +242,10 @@ public class CountriesRunner {
         System.out.println("=======================================");
         collection.stream().collect(Collectors.groupingBy(Function.identity())).forEach((a, list) -> System.out.println(a));
         System.out.println("=======================================");
-        collection.stream().map(e -> new StringBuilder(e).reverse()).forEach(e -> System.out.println(e));
+        collection.stream().map((e) -> new StringBuilder(e).reverse()).forEach(e -> System.out.println(e));
         System.out.println("=======================================");
         collection.forEach(n -> System.out.println(n + "  :" + n.length()));
-
+        System.out.println("=======================================");
+        collection.stream().filter((e)->e.equalsIgnoreCase(new StringBuilder(e).reverse().toString())).forEach((e)-> System.out.println(e));
     }
 }

@@ -59,11 +59,12 @@ public class ConstructionApplication extends HttpServlet {
         String result = constructionService.validateAndSave(dto);
         System.out.println("Result: " + result);
 
-        RequestDispatcher dispatcher = req.getRequestDispatcher("Constructions.jsp");
+
         req.setAttribute("message",result);
         if(!result.equals("Sucessfully Submited")){
             req.setAttribute("dto",dto);
         }
+        RequestDispatcher dispatcher = req.getRequestDispatcher("Constructions.jsp");
         dispatcher.forward(req, resp);
     }
 
@@ -79,9 +80,14 @@ public class ConstructionApplication extends HttpServlet {
 
         if(constructionDTO==null){
             System.out.println("dats is not found");
+
         }
         else{
             System.out.println("data is found");
+            RequestDispatcher dispatcher = req.getRequestDispatcher("search.jsp");
+            req.setAttribute("dto",constructionDTO);
+            dispatcher.forward(req, resp);
+
         }
     }
 }
