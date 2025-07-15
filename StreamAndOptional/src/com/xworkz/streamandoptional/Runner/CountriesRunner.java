@@ -3,6 +3,7 @@ package com.xworkz.streamandoptional.Runner;
 import com.xworkz.streamandoptional.Dto.CountriesDTO;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 
 public class CountriesRunner {
@@ -394,12 +395,9 @@ public class CountriesRunner {
         collection.add(uruguay);
         collection.add(uzbekistan);
         collection.add(vanuatu);
-
-        collection.add(vietnam);
         collection.add(yemen);
         collection.add(zambia);
         collection.add(zimbabwe);
-        System.out.println("============");
 
         collection.forEach(a-> System.out.println(a.getName()));
         System.out.println("================================");
