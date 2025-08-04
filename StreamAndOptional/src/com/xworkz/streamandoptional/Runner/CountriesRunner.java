@@ -2,9 +2,7 @@ package com.xworkz.streamandoptional.Runner;
 
 import com.xworkz.streamandoptional.Dto.CountriesDTO;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
+import java.util.*;
 
 public class CountriesRunner {
     public static void main(String[] args) {
@@ -206,14 +204,14 @@ public class CountriesRunner {
         CountriesDTO solomon_islands = new CountriesDTO("Solomon Islands", 100000, 100L, 30, 100000, "Leader Name", "Language1", "Language2", 1000);
         CountriesDTO tokelau = new CountriesDTO("Tokelau", 100000, 100L, 30, 100000, "Leader Name", "Language1", "Language2", 1000);
         CountriesDTO macao = new CountriesDTO("Macao", 100000, 100L, 30, 100000, "Leader Name", "Language1", "Language2", 1000);
-        CountriesDTO denmark = new CountriesDTO("Denmark", 100000, 100L, 30, 100000, "Leader Name", "Language1", "Language2", 1000);
+        CountriesDTO denmark = new CountriesDTO("Denmark", 100000, 100L, 30, 100000, "Leader Name", "Language1", "english", 1000);
         CountriesDTO finland = new CountriesDTO("Finland", 100000, 100L, 30, 100000, "Leader Name", "Language1", "Language2", 1000);
-        CountriesDTO sweden = new CountriesDTO("Sweden", 100000, 100L, 30, 100000, "Leader Name", "Language1", "Language2", 1000);
+        CountriesDTO sweden = new CountriesDTO("Sweden", 100000, 100L, 30, 100000, "Leader Name", "Language1", "english", 1000);
         CountriesDTO montserrat = new CountriesDTO("Montserrat", 100000, 100L, 30, 100000, "Leader Name", "Language1", "Language2", 1000);
         CountriesDTO pitcairn = new CountriesDTO("Pitcairn", 100000, 100L, 30, 100000, "Leader Name", "Language1", "Language2", 1000);
         CountriesDTO tunis = new CountriesDTO("Tunis", 100000, 100L, 30, 100000, "Leader Name", "Language1", "Language2", 1000);
-        CountriesDTO bouvet_island = new CountriesDTO("Bouvet Island", 100000, 100L, 30, 100000, "Leader Name", "Language1", "Language2", 1000);
-        CountriesDTO heard_island_and_mcdonald_islands = new CountriesDTO("Heard Island and McDonald Islands", 100000, 100L, 30, 100000, "Leader Name", "Language1", "Language2", 1000);
+        CountriesDTO bouvet_island = new CountriesDTO("Bouquet Island", 100000, 50L, 30, 100000, "Leader Name", "english", "Language2", 1000);
+        CountriesDTO heard_island_and_mcdonald_islands = new CountriesDTO("Heard Island and McDonald Islands", 100000, 100L, 30, 100000, "Leader Name", "english", "Language2", 1000);
         Collection<CountriesDTO> collection1=new ArrayList<>();
         collection.add(afghanistan);
         collection.add(albania);
@@ -221,7 +219,6 @@ public class CountriesRunner {
         collection.add(andorra);
         collection.add(angola);
         collection.add(antigua_and_barbuda);
-
         collection.add(armenia);
         collection.add(australia);
         collection.add(austria);
@@ -236,15 +233,12 @@ public class CountriesRunner {
         collection.add(benin);
         collection.add(bhutan);
         collection.add(bolivia_plurinational_state_of);
-
         collection.add(botswana);
         collection.add(brazil);
-
         collection.add(bulgaria);
         collection.add(burkina_faso);
         collection.add(burundi);
         collection.add(cabo_verde);
-
         collection.add(cameroon);
         collection.add(canada);
         collection.add(central_african_republic);
@@ -253,7 +247,6 @@ public class CountriesRunner {
         collection.add(china);
         collection.add(colombia);
         collection.add(comoros);
-
         collection.add(costa_rica);
         collection.add(croatia);
         collection.add(cuba);
@@ -275,12 +268,9 @@ public class CountriesRunner {
         collection.add(gambia);
         collection.add(georgia);
         collection.add(germany);
-
         collection.add(greece);
-
         collection.add(guinea);
         collection.add(guinea_bissau);
-
         collection.add(haiti);
         collection.add(honduras);
         collection.add(hungary);
@@ -297,7 +287,6 @@ public class CountriesRunner {
         collection.add(jordan);
         collection.add(kazakhstan);
         collection.add(kenya);
-
         collection.add(korea_democratic_peoples_republic_of);
         collection.add(korea_republic_of);
         collection.add(kuwait);
@@ -305,9 +294,8 @@ public class CountriesRunner {
         collection.add(laos);
         collection.add(latvia);
         collection.add(lebanon);
-
         collection.add(liberia);
-       collection.add(liechtenstein);
+        collection.add(liechtenstein);
         collection.add(lithuania);
         collection.add(luxembourg);
         collection.add(madagascar);
@@ -321,16 +309,13 @@ public class CountriesRunner {
         collection.add(mauritius);
         collection.add(mexico);
         collection.add(micronesia_federated_states_of);
-
         collection.add(monaco);
         collection.add(mongolia);
         collection.add(montenegro);
         collection.add(morocco);
         collection.add(mozambique);
-
         collection.add(namibia);
         collection.add(nauru);
-
         collection.add(netherlands);
         collection.add(new_zealand);
         collection.add(nicaragua);
@@ -347,7 +332,6 @@ public class CountriesRunner {
         collection.add(peru);
         collection.add(philippines);
         collection.add(poland);
-
         collection.add(qatar);
         collection.add(romania);
         collection.add(russian_federation);
@@ -357,12 +341,10 @@ public class CountriesRunner {
         collection.add(saint_vincent_and_the_grenadines);
         collection.add(samoa);
         collection.add(san_marino);
-
         collection.add(saudi_arabia);
         collection.add(senegal);
         collection.add(serbia);
         collection.add(seychelles);
-
         collection.add(singapore);
         collection.add(slovakia);
         collection.add(slovenia);
@@ -372,7 +354,6 @@ public class CountriesRunner {
         collection.add(south_sudan);
         collection.add(spain);
         collection.add(sri_lanka);
-
         collection.add(suriname);
         collection.add(sweden);
         collection.add(switzerland);
@@ -383,13 +364,10 @@ public class CountriesRunner {
         collection.add(timor_leste);
         collection.add(togo);
         collection.add(tonga);
-
         collection.add(tunisia);
         collection.add(turkey);
         collection.add(turkmenistan);
-
         collection.add(ukraine);
-
         collection.add(united_kingdom);
         collection.add(united_states);
         collection.add(uruguay);
@@ -405,8 +383,15 @@ public class CountriesRunner {
         System.out.println("================================");
         collection.stream().filter(r->r.getName().toLowerCase().startsWith("r")).forEach(startswithR-> System.out.println(startswithR.getName()));
         System.out.println("================================");
-        collection.stream().filter(a->a.getPinCode()==577009).forEach(findpincode-> System.out.println(findpincode.getName()));
+        collection.stream().filter(a->a.getPinCode()==577002).forEach(findpincode-> System.out.println(findpincode.getName()));
         System.out.println("================================");
+        collection.stream().filter(a-> a.getPrimaryLang().toLowerCase(Locale.ROOT).equals("english")).forEach(a-> System.out.println(a.getName()));
+        System.out.println("================================");
+        public Optional<CountriesDTO> findByPrimeMinister(List<CountriesDTO> collection, String PrimeMinister) {
+            return countries.stream()
+                    .filter(c -> c.getPrimeMinister().equalsIgnoreCase(pm))
+                    .findFirst();
+        }
 
     }
 }
